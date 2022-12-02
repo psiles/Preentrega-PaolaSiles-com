@@ -1,0 +1,14 @@
+%estilosFlex{
+    display: flex;               
+    justify-content: center;
+    align-items: center;
+}
+
+%estilosFlexDos{
+    display: flex;               
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+
+}
+

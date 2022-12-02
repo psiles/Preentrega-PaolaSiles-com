@@ -1,0 +1,40 @@
+body{
+    main{
+        .container-newseason{
+            .information{
+                h2{
+                    font-size: 1.4rem;
+
+                }
+                p{
+                    font-size: 0.9rem;
+
+                }
+            }
+
+            .contact{
+                fieldset{
+                    legend{
+                        h3{
+                            font-size: 0.9rem;
+
+                        }
+                        .input{
+                            font-size: 0.9rem;
+                            label{
+
+                            }
+                            input{
+                                font-size: 1rem;
+
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }    
+    }
+
+}

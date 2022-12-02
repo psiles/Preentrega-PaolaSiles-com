@@ -1,0 +1,77 @@
+
+@media screen and (max-width:420px){
+    body{
+
+        header{
+    
+            .log-in{
+                background-color:$color-background-uno;
+                font-size: 0.5rem; 
+                img{
+        
+                }
+                a{
+                    padding: 0.4rem; 
+                    font-size: 0.7rem;               
+                }
+        
+            }
+            .nav-color{
+                padding: 0.4rem; 
+                font-size: 0.9rem; 
+    
+                div{
+                    .navbar-toggler{}
+                    div{
+                        ul{
+     
+                            li{
+    
+                                a{
+                                    margin-top: 0.6 0 0 0;
+                                    padding: 0;
+    
+                                }
+                            }
+                        }
+                        div{
+                            .cart{
+                                a{
+    
+                                }
+                            }
+                        }
+                    }
+        
+                } 
+            }
+            .logo{
+                margin: 0.5rem;
+                padding: 0.2rem;
+                text-align: center; 
+    
+                .wolf{
+                    img{
+
+                        @include medidas (8rem, 8rem);
+   
+
+                    }
+        
+                }
+                h1{
+                    font-size: 2rem; 
+    
+                }
+                p{
+                    font-size: 1.2rem;    
+                }
+            }
+        }
+    
+        
+        
+    
+        
+    }
+}

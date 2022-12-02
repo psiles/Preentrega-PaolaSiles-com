@@ -1,0 +1,134 @@
+@media screen and (max-width:420px){
+    body{
+        main {
+            display: flex;               
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+        
+       
+            /*SAMPLE*/
+            .sample {
+                margin:0;
+                width: 97%;
+
+            } 
+        
+            /*NewSeason*/
+            .container-newseason{
+    
+                .New-season{                   
+                    display: flex;
+                    flex-direction: row;
+                    @include medidas (97%, 80%);
+                    margin: 1rem 0.5rem 0.5rem 0.5rem; 
+    
+                    .img{
+                        @include medidas (200px, 200px);
+
+                        img{
+                            @include medidas (200px, 200px);
+    
+                        }
+                    }
+                    .info{
+                        font-size: 0.9rem;
+                        margin: 0.5rem;
+    
+                        h2{
+                            font-family: $font-family;
+                            font-size: 1.2rem;
+     
+                        }
+                        p{}
+                    }
+                }
+            }
+        
+            /*PRODUCT*/
+        
+            .container-product{
+                display: flex;    
+                flex-direction: row;
+                justify-content: space-around;
+    
+                .product{
+                    width: 50%;
+                    margin: 1rem; 
+    
+                    div{
+                        img{
+                            width: 100%;
+                            background-size: auto;
+    
+        
+                        }
+                    }
+                    p{
+                        font-size: 0.9rem;
+                        margin: 0.5rem;
+                    }
+                }
+            }
+    
+            .carrousel-container{
+    
+    
+                .carrousel {
+     
+    
+                    h3{
+                        font-size: 1rem;
+                        margin: 1rem;
+    
+                    }
+                    .product-carrousel{
+                        background: $color-background-dos;         
+                        width: 40%;
+                        background-size: cover;
+                        margin: 1rem;
+    
+                        div{
+                            img{
+                                width:100%;
+                                @include margin-padding (0rem, 0rem);
+                                background-size: cover;
+    
+                            }
+                        }
+                        p{
+                            font-size: 1rem;
+    
+                        }
+    
+                    }
+    
+                   
+                }
+    
+                .more-products{
+                    display: flex;               
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0.2rem 0.2rem 0.2rem rgb(181, 18, 18);
+                    @include margin-padding (0.5rem, 0rem);
+                    @include medidas (10rem, 2rem);            
+
+    
+                    .button{
+                        margin: 0;     
+                        font-size: 1rem;   
+    
+                    }
+    
+                }
+    
+                .more-products:hover{
+    
+                }        
+            }
+            
+        }
+        
+    }
+}

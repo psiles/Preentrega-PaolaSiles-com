@@ -1,0 +1,165 @@
+body{
+    main {
+        display: flex;
+        display:grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas:
+            "header header header"                
+            "sample sample sample"
+            "container-newseason container-newseason container-product"         
+            "carrousel-container carrousel-container carrousel-container"          
+    
+        ;  
+    
+        /*SAMPLE*/
+        .sample {
+            background-color:$color-background-tres;
+            @include margin-padding (1.5rem, 1rem);
+            border-radius: 30px;
+            align-items: center;
+            grid-area: sample; /*GRID AREA*/
+            .carouselExampleFade{
+                .carousel-inner{
+                    div{
+                        img{
+    
+                        }
+                    }
+    
+                }
+    
+            }
+        
+        } 
+    
+        /*NewSeason*/
+        .container-newseason{
+            grid-area: container-newseason;/*GRID AREA*/
+            .New-season{
+                background-color: $color-background-tres;   
+                display: inline-block;     
+                margin: 1.5rem;
+                max-width: 800px;
+                height: 600px; 
+                display: flex;
+                border-radius: 20px;
+                .img{
+                      
+                    img{
+                        
+                        display: inline-block;      
+                        background-repeat: no-repeat;      
+                        background-size: cover;
+                        @include medidas (600px, 600px);
+                        border-radius: 20px;
+                    }
+                }
+                .info{
+                    
+                    margin: 1rem;
+                    h2{
+                        display: block;
+                        display: inline-block;
+                        margin: 0.5rem;
+                        font-size: 1.6rem; 
+                    }
+                    p{}
+                }
+            }
+        }
+    
+        /*PRODUCT*/
+    
+        .container-product{
+            grid-area: container-product;/*GRID AREA*/
+            .product{
+                background-color: bisque;
+                margin: 1.5rem 3rem 3.2rem 0;
+                background-color:#fbd07c; 
+                @include medidas (300px, 275px);
+                border-radius: 20px;
+                div{
+                    img{
+                        background-repeat: no-repeat; 
+                        background-size: contain; 
+                        background-size: cover;
+                        @include medidas (300px, 200px);
+                        border-radius: 20px;
+    
+                    }
+                }
+                p{}
+            }
+        }
+
+        .carrousel-container{
+            grid-area: carrousel-container; /*GRID AREA*/
+            @extend %estilosFlexDos;
+
+            .carrousel {
+                font-family: $font-family;
+                font-size: 2rem;
+                @include margin-padding (0.9rem, 0.5px);
+
+                h3{
+                    font-family: $font-family;
+                    font-size: 2rem;
+                    margin: 0.9rem;
+                }
+                .product-carrousel{
+                    background-color: $color-background-cuatro;
+                    @include medidas (17rem, 15rem);
+                    display: inline-block;
+                    @include margin-padding (0.7rem, 0.7rem);
+
+                    div{
+                        img{
+                            height: 150px;
+                        }
+                    }
+                    p{
+
+                    }
+
+                }
+
+               
+            }
+
+            .more-products{
+                display:flex;
+                cursor: pointer;
+                display:inline-block;
+                box-shadow: 0.1rem 0.1rem 0.1rem rgb(181, 18, 18); 
+                @include medidas (14rem, 3rem);     
+                border: 0.1rem solid #c7c7c7;
+                border-radius: 0.6rem;
+                margin: 1rem;
+                color: #333;
+                background: $button-background;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            
+                .button{
+                    @extend %estilosFlex;
+                    text-decoration: none;
+                    margin: 0.6rem;
+                    font-size: 1.2rem;
+                    color: $color-texto;
+                    font-weight: bold;
+                    font-family: $font-family;
+                }
+
+            }
+
+            .more-products:hover{
+                box-shadow: 1px 1px 2px black;
+                transform: scale(1.1);
+            }        
+        }
+        
+    }
+    
+}
+
+  

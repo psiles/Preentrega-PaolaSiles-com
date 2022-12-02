@@ -1,0 +1,9 @@
+@mixin medidas($ancho, $alto){
+	width: $ancho;
+	height: $alto;
+	}
+
+@mixin margin-padding ($margin, $padding){
+	margin: $margin;
+	padding: $padding;
+}	

@@ -1,0 +1,44 @@
+body{
+    main{
+        .container-newseason{
+            .information{
+                h2{
+                    font-size: 1.6rem;
+
+                }
+                p{
+                    font-size: 1.2rem;
+
+                }
+            }
+
+            .contact{
+                @include margin-padding (0.7rem, 1rem);
+                font-family: $font-family;
+                font-weight: lighter;
+                fieldset{
+                    legend{
+                        h3{
+                            font-size: 1.4rem;
+
+                        }
+                        .input{
+                            padding: 0.5rem;
+                            font-size: 1rem;
+                            label{
+
+                            }
+                            input{
+                                font-size: 1rem;
+
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }    
+    }
+
+}

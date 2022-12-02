@@ -1,0 +1,58 @@
+body{
+    .footer-container{
+        background-color: $color-background-tres;
+        padding: 0.9rem;
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        .footer{
+            @include margin-padding (0.5rem, 0.5rem);
+
+            h4{
+                font-size: 1.2rem;
+                font-family: $font-family;
+                padding: 0.5rem;
+
+            }
+            ul{
+                li{
+                    font-family: $font-family;
+                    font-weight: lighter;
+                    list-style: none;
+                    margin: 0.5rem;
+
+                }
+            }
+        }
+        .icono-wp{
+            .link{
+                .icono{
+                    background-color: green;
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    @include medidas (4%, 10%);
+                    margin: 1.4rem;
+                    border-radius: 100px;
+                    animation-name: icono; 
+                    animation-iteration-count: infinite; 
+                    animation-duration: 1.5s;
+                    animation-direction: alternate-reverse;
+
+                }
+                @keyframes icono {
+                    to{
+                        transform: scale(1); 
+                    }
+                    from{
+                        transform: scale(1.1); 
+                    }
+                }
+                
+
+
+            }
+
+        }
+    }
+}

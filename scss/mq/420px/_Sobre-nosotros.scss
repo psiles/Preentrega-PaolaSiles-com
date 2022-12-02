@@ -1,0 +1,27 @@
+@media screen and (max-width:420px){
+    body{
+        main{
+            .container-newseason{
+                .information{
+                    h2{
+                        font-size: 2rem;
+
+                    }
+                    p{
+                        font-size: 0.7rem;
+
+                    }
+                }
+                .video{
+
+                    width: 95%;
+                    .info-video{
+                        width: 95%;
+
+                    }
+                }
+            }
+
+        }
+    }
+}

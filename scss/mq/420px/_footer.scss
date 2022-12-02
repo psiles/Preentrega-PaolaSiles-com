@@ -1,0 +1,39 @@
+@media screen and (max-width:420px){
+    body{
+        .footer-container{
+            display: flex;
+            flex-direction: column;
+            margin-top: 0.5rem;
+            .footer{
+                display: flex;
+                flex-direction: column;
+                margin-top: 0.5rem;
+                margin: 0;
+                padding: 0;      
+                h4{
+
+    
+                }
+                ul{
+                    li{
+
+    
+                    }
+                }
+            }
+            .icono-wp{
+                .link{
+                    .icono{
+                        width: 13%;
+                        height: 13%;
+                        margin: 1.4rem;    
+                    }      
+    
+                }
+    
+            }
+        }
+    }
+
+}
+
