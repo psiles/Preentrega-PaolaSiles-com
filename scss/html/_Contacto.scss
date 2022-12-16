@@ -1,6 +1,6 @@
 body{
     main{
-        .container-newseason{
+        .carrousel-container{
             .information{
                 h2{
                     font-size: 1.6rem;
@@ -13,23 +13,32 @@ body{
             }
 
             .contact{
+                @extend %estilosFlex;
+                background-color: $color-background-tres;                
+                @include medidas (20rem, 20rem);
                 @include margin-padding (0.7rem, 1rem);
                 font-family: $font-family;
                 font-weight: lighter;
+                border-radius: 10%;
                 fieldset{
+                    
+                    padding: 1rem;
+                    margin: 2rem;
                     legend{
+                        
                         h3{
-                            font-size: 1.4rem;
-
+                            font-size: 1.5rem;
+                            
                         }
                         .input{
                             padding: 0.5rem;
                             font-size: 1rem;
-                            label{
+                            
+                            
 
-                            }
                             input{
-                                font-size: 1rem;
+                                font-size: 1rem;                                                          
+                               
 
                             }
                         }
@@ -38,6 +47,13 @@ body{
 
 
             }
+
+            .contact:hover{
+                background-color: $color-background-uno;
+                box-shadow: 1px 1px 2px rgb(181, 18, 18);
+                              
+                
+            } 
         }    
     }
 

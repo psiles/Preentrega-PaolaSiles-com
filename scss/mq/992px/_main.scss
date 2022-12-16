@@ -16,31 +16,39 @@
         
             /*NewSeason*/
             .container-newseason{
+                @include medidas (100%, 100%);
+                
     
                 .New-season{                   
                     display: flex;
                     flex-direction: row;
-                    @include medidas (97%, 80%);
+                    @include medidas (96%, 100%);
                     margin: 1rem 0.5rem 0.5rem 0.5rem; 
     
                     .img{
-                        @include medidas (200px, 200px);
+                        @include medidas (100%, 100%);
 
                         img{
-                            @include medidas (200px, 200px);
+                            @include medidas (100%, 100%);
     
                         }
                     }
                     .info{
+                        margin: 1rem;
                         font-size: 0.9rem;
                         margin: 0.5rem;
+                        display: flex;               
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column; 
     
                         h2{
                             font-family: $font-family;
-                            font-size: 1.2rem;
-     
+                            font-size: 1.4rem;     
                         }
-                        p{}
+                        p{
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
@@ -78,13 +86,13 @@
      
     
                     h3{
-                        font-size: 1rem;
+                        font-size: 1.3rem;
                         margin: 1rem;
     
                     }
                     .product-carrousel{
                         background: $color-background-dos;         
-                        width: 40%;
+                        width: 21%;
                         background-size: cover;
                         margin: 1rem;
     
@@ -110,7 +118,7 @@
                     display: flex;               
                     justify-content: center;
                     align-items: center;
-                    box-shadow: 0.2rem 0.2rem 0.2rem rgb(181, 18, 18); 
+                    box-shadow: 0.2rem 0.2rem 0.2rem black; 
                     @include medidas (10rem, 2rem); 
                     @include margin-padding (0.5rem, 0rem);          
 
@@ -122,9 +130,7 @@
     
                 }
     
-                .more-products:hover{
-    
-                }        
+     
             }
             
         }

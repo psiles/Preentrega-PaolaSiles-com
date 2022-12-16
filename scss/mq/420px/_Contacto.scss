@@ -1,40 +1,44 @@
-body{
-    main{
-        .container-newseason{
-            .information{
-                h2{
-                    font-size: 1.4rem;
-
+@media screen and (max-width:420px){
+    body{
+        main{
+            .carrousel-container{
+                .information{
+                    h2{
+                        font-size: 1.2rem;
+    
+                    }
+                    p{
+                        font-size: 0.8rem;
+    
+                    }
                 }
-                p{
-                    font-size: 0.9rem;
-
-                }
-            }
-
-            .contact{
-                fieldset{
-                    legend{
-                        h3{
-                            font-size: 0.9rem;
-
-                        }
-                        .input{
-                            font-size: 0.9rem;
-                            label{
-
-                            }
-                            input{
+    
+                .contact{
+                    fieldset{
+                        legend{
+                            h3{
                                 font-size: 1rem;
-
+    
+                            }
+                            .input{
+                                font-size: 0.8rem;
+                                label{
+    
+                                }
+                                input{
+                                    font-size: 0.8rem;
+    
+                                }
                             }
                         }
                     }
+    
+    
                 }
-
-
-            }
-        }    
+            }    
+        }
+    
     }
 
 }
+

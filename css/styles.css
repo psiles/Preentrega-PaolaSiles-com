@@ -4,12 +4,12 @@
   padding: 0;
   box-sizing: border-box; }
 
-body main .carrousel-container .more-products .button {
+body main .container-product .product p, body main .carrousel-container .carrousel .products-button .more-products .button, body main .carrousel-container .contact {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-body main .carrousel-container {
+body main .carrousel-container, body main .carrousel-container .information, body main .carrousel-container .carrousel .products-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,10 +21,15 @@ body {
     grid-area: header;
     /*GRID AREA*/ }
     body header .log-in {
-      background-color: #f1be59;
+      background-color: #f1bf5b;
       padding: 0.5rem;
       display: flex;
       justify-content: flex-end; }
+      body header .log-in img {
+        width: 2rem;
+        height: 2rem;
+        margin: 0.2rem;
+        border-radius: 1rem; }
       body header .log-in a {
         margin: 0.1rem;
         padding: 0.3rem;
@@ -33,7 +38,7 @@ body {
         font-size: 1rem;
         color: #514747; }
     body header .nav-color {
-      background: linear-gradient(90deg, #fbd17e 0%, #f7f778 100%);
+      background: linear-gradient(90deg, #fbd17e 0%, #ffe3c2 100%);
       padding: 0.1rem;
       z-index: 10;
       position: sticky;
@@ -50,8 +55,11 @@ body {
             text-decoration: none;
             margin: 0.2rem;
             padding: 0.3rem; }
-      body header .nav-color div div div .cart a {
-        text-decoration: none; }
+      body header .nav-color div div .cart img {
+        text-decoration: none;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0.2rem; }
     body header .logo {
       margin: 1rem;
       padding: 0.5rem;
@@ -68,37 +76,47 @@ body {
 body main {
   display: flex;
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
-  grid-template-rows: 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas: "header header header"                 "sample sample sample" "container-newseason container-newseason container-product"          "carrousel-container carrousel-container carrousel-container";
   /*SAMPLE*/
   /*NewSeason*/
   /*PRODUCT*/ }
   body main .sample {
-    background-color: #fbd07c;
     margin: 1.5rem;
     padding: 1rem;
     border-radius: 30px;
     align-items: center;
     grid-area: sample;
-    /*GRID AREA*/ }
+    /*GRID AREA*/
+    max-width: 100%;
+    height: auto; }
+    body main .sample .carousel-inner {
+      border-radius: 30px; }
+      body main .sample .carousel-inner .carousel-item .d-block {
+        border: 5px solid #fbd17e;
+        max-width: 100%;
+        height: auto;
+        border-radius: 30px; }
   body main .container-newseason {
     grid-area: container-newseason;
-    /*GRID AREA*/ }
+    /*GRID AREA*/
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
     body main .container-newseason .New-season {
-      background-color: #fbd07c;
+      background-color: #fbd17e;
       display: inline-block;
       margin: 1.5rem;
-      max-width: 800px;
+      width: 700px;
       height: 600px;
-      display: flex;
       border-radius: 20px; }
       body main .container-newseason .New-season .img img {
         display: inline-block;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 600px;
-        height: 600px;
+        width: 700px;
+        height: 400px;
         border-radius: 20px; }
       body main .container-newseason .New-season .info {
         margin: 1rem; }
@@ -107,166 +125,216 @@ body main {
           display: inline-block;
           margin: 0.5rem;
           font-size: 1.6rem; }
+        body main .container-newseason .New-season .info p {
+          margin: 1rem;
+          font-size: 1rem; }
   body main .container-product {
     grid-area: container-product;
-    /*GRID AREA*/ }
+    /*GRID AREA*/
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column; }
     body main .container-product .product {
-      background-color: bisque;
+      display: flex;
       margin: 1.5rem 3rem 3.2rem 0;
-      background-color: #fbd07c;
-      width: 300px;
-      height: 275px;
+      background-color: #fbd17e;
+      width: 400px;
+      height: 260px;
       border-radius: 20px; }
       body main .container-product .product div img {
         background-repeat: no-repeat;
         background-size: contain;
         background-size: cover;
-        width: 300px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
         border-radius: 20px; }
+      body main .container-product .product p {
+        margin: 1rem;
+        width: 30%;
+        font-size: 1rem; }
   body main .carrousel-container {
     grid-area: carrousel-container;
     /*GRID AREA*/ }
     body main .carrousel-container .carrousel {
       font-family: "IM Fell DW Pica", serif;
-      font-size: 2rem;
       margin: 0.9rem;
       padding: 0.5px; }
       body main .carrousel-container .carrousel h3 {
         font-family: "IM Fell DW Pica", serif;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin: 0.9rem; }
-      body main .carrousel-container .carrousel .product-carrousel {
-        background-color: bisque;
-        width: 17rem;
-        height: 15rem;
+      body main .carrousel-container .carrousel .products-button .only-products .product-carrousel {
+        background-color: #ffe3c2;
+        width: 16%;
+        height: 60%;
         display: inline-block;
         margin: 0.7rem;
         padding: 0.7rem; }
-        body main .carrousel-container .carrousel .product-carrousel div img {
-          height: 150px; }
-    body main .carrousel-container .more-products {
-      display: flex;
-      cursor: pointer;
-      display: inline-block;
-      box-shadow: 0.1rem 0.1rem 0.1rem #b51212;
-      width: 14rem;
-      height: 3rem;
-      border: 0.1rem solid #c7c7c7;
-      border-radius: 0.6rem;
-      margin: 1rem;
-      color: #333;
-      background: linear-gradient(90deg, #c3f9d6 0%, #f7d487 50%, #f2787c 100%);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; }
-      body main .carrousel-container .more-products .button {
-        text-decoration: none;
-        margin: 0.6rem;
-        font-size: 1.2rem;
-        color: #514747;
-        font-weight: bold;
-        font-family: "IM Fell DW Pica", serif; }
-    body main .carrousel-container .more-products:hover {
-      box-shadow: 1px 1px 2px black;
-      transform: scale(1.1); }
+        body main .carrousel-container .carrousel .products-button .only-products .product-carrousel div img {
+          width: 95%; }
+        body main .carrousel-container .carrousel .products-button .only-products .product-carrousel p {
+          font-size: 1.2rem; }
+      body main .carrousel-container .carrousel .products-button .more-products {
+        display: flex;
+        cursor: pointer;
+        display: inline-block;
+        box-shadow: 0.1rem 0.1rem 0.1rem black;
+        width: 14rem;
+        height: 3rem;
+        border: 0.1rem solid #c7c7c7;
+        border-radius: 0.6rem;
+        margin: 1rem;
+        color: #333;
+        background: linear-gradient(90deg, #f1bf5b 0%, #fbd17e 50%, #ffe3c2 100%);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; }
+        body main .carrousel-container .carrousel .products-button .more-products .button {
+          text-decoration: none;
+          margin: 0.6rem;
+          font-size: 1.2rem;
+          color: #514747;
+          font-weight: bold;
+          font-family: "IM Fell DW Pica", serif; }
+      body main .carrousel-container .carrousel .products-button .more-products:hover {
+        box-shadow: 1px 1px 2px #b51212;
+        transform: scale(1.1); }
 
 body .footer-container {
-  background-color: #fbd07c;
-  padding: 0.9rem;
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly; }
-  body .footer-container .footer {
-    margin: 0.5rem;
-    padding: 0.5rem; }
-    body .footer-container .footer h4 {
-      font-size: 1.2rem;
-      font-family: "IM Fell DW Pica", serif;
+  grid-area: footer;
+  /*GRID AREA*/
+  background-color: #fbd17e;
+  padding: 0.9rem; }
+  body .footer-container .container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly; }
+    body .footer-container .container .footer {
+      margin: 0.5rem;
       padding: 0.5rem; }
-    body .footer-container .footer ul li {
-      font-family: "IM Fell DW Pica", serif;
-      font-weight: lighter;
-      list-style: none;
+      body .footer-container .container .footer h4 {
+        font-size: 1.2rem;
+        font-family: "IM Fell DW Pica", serif;
+        padding: 0.5rem; }
+      body .footer-container .container .footer ul li {
+        font-family: "IM Fell DW Pica", serif;
+        font-weight: lighter;
+        list-style: none;
+        margin: 0.5rem; }
+        body .footer-container .container .footer ul li .facebook {
+          width: 3rem;
+          height: 3rem;
+          margin: 0.5rem; }
+        body .footer-container .container .footer ul li .instagram {
+          width: 4rem;
+          height: 4rem; }
+    body .footer-container .container .mediosdepago ul li .tarjeta {
+      width: 4rem;
+      height: 3rem;
       margin: 0.5rem; }
-  body .footer-container .icono-wp .link .icono {
-    background-color: green;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 4%;
-    height: 10%;
-    margin: 1.4rem;
-    border-radius: 100px;
-    animation-name: icono;
-    animation-iteration-count: infinite;
-    animation-duration: 1.5s;
-    animation-direction: alternate-reverse; }
+    body .footer-container .container .contacto ul li .direccion {
+      text-decoration: none;
+      font-size: 1.1rem; }
+    body .footer-container .container .contacto ul li .email {
+      font-size: 1.1rem; }
+    body .footer-container .container .contacto ul li .telefono {
+      text-decoration: none;
+      font-size: 1.1rem; }
+    body .footer-container .container .icono-wp .link .icono {
+      background-color: green;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 5%;
+      height: 9%;
+      margin: 1.4rem;
+      border-radius: 100px;
+      animation-name: icono;
+      animation-iteration-count: infinite;
+      animation-duration: 1.5s;
+      animation-direction: alternate-reverse; }
 
 @keyframes icono {
   to {
     transform: scale(1); }
   from {
     transform: scale(1.1); } }
+  body .footer-container div {
+    margin: 1rem 1rem 2rem 1rem;
+    font-family: "IM Fell DW Pica", serif;
+    font-size: 1.2rem; }
 
-body main .information {
+body main .carrousel-container .information {
+  margin: 0.5rem;
+  padding: 1rem; }
+  body main .carrousel-container .information h2 {
+    font-size: 1.6rem;
+    font-family: "IM Fell DW Pica", serif; }
+  body main .carrousel-container .information p {
+    padding: 0.8rem;
+    margin: 0;
+    font-family: "IM Fell DW Pica", serif;
+    font-weight: lighter; }
+
+body main .carrousel-container .video {
+  margin: 0.5rem;
+  padding: 1.5rem; }
+
+body main .carrousel-container .carrousel h2 {
+  font-size: 1.6rem; }
+
+body main .carrousel-container .carrousel h3 {
+  font-size: 1.5rem; }
+
+body main .carrousel-container .carrousel .products-button .only-products .product-carrousel div p {
+  font-size: 1.2rem; }
+
+body main .carrousel-container .information {
   margin: 0.5rem;
   padding: 1rem 1rem 0px 1rem; }
-  body main .information h2 {
-    font-size: 2rem;
+  body main .carrousel-container .information h2 {
+    font-size: 1.6rem;
     font-family: "IM Fell DW Pica", serif; }
-  body main .information p {
+  body main .carrousel-container .information p {
     padding: 0.5rem;
     font-family: "IM Fell DW Pica", serif;
     font-weight: lighter;
     font-size: 1rem; }
-  body main .information .list {
+  body main .carrousel-container .information .list {
     padding: 0.8rem; }
-    body main .information .list ol li {
+    body main .carrousel-container .information .list ol li {
+      font-size: 1rem;
       margin-left: 0.8rem;
       font-family: "IM Fell DW Pica", serif;
       font-weight: lighter; }
 
-body main .container-newseason .information h2 {
+body main .carrousel-container .information h2 {
   font-size: 1.6rem; }
 
-body main .container-newseason .information p {
+body main .carrousel-container .information p {
   font-size: 1.2rem; }
 
-body main .container-newseason .contact {
+body main .carrousel-container .contact {
+  background-color: #fbd17e;
+  width: 20rem;
+  height: 20rem;
   margin: 0.7rem;
   padding: 1rem;
   font-family: "IM Fell DW Pica", serif;
-  font-weight: lighter; }
-  body main .container-newseason .contact fieldset legend h3 {
-    font-size: 1.4rem; }
-  body main .container-newseason .contact fieldset legend .input {
-    padding: 0.5rem;
-    font-size: 1rem; }
-    body main .container-newseason .contact fieldset legend .input input {
+  font-weight: lighter;
+  border-radius: 10%; }
+  body main .carrousel-container .contact fieldset {
+    padding: 1rem;
+    margin: 2rem; }
+    body main .carrousel-container .contact fieldset legend h3 {
+      font-size: 1.5rem; }
+    body main .carrousel-container .contact fieldset legend .input {
+      padding: 0.5rem;
       font-size: 1rem; }
+      body main .carrousel-container .contact fieldset legend .input input {
+        font-size: 1rem; }
 
-body main .carrousel-container .carrousel h2 {
-  font-size: 2rem; }
-
-body main .carrousel-container .carrousel h3 {
-  font-size: 1.8rem; }
-
-body main .carrousel-container .carrousel .product-carrousel div p {
-  font-size: 0.7rem; }
-
-body main .container-newseason .information {
-  margin: 0.5rem;
-  padding: 1rem 1rem 0px 1rem; }
-  body main .container-newseason .information h2 {
-    font-size: 3rem;
-    font-family: "IM Fell DW Pica", serif; }
-  body main .container-newseason .information p {
-    padding: 0.8rem;
-    font-family: "IM Fell DW Pica", serif;
-    font-weight: lighter; }
-
-body main .container-newseason .video {
-  margin: 0.5rem;
-  padding: 1.5rem; }
+body main .carrousel-container .contact:hover {
+  background-color: #f1bf5b;
+  box-shadow: 1px 1px 2px #b51212; }
 
 @media screen and (max-width: 992px) {
   body {
@@ -275,7 +343,7 @@ body main .container-newseason .video {
       grid-area: header;
       /*GRID AREA*/ }
       body header .log-in {
-        background-color: #f1be59;
+        background-color: #f1bf5b;
         padding: 0.5rem;
         display: flex;
         justify-content: flex-end; }
@@ -284,10 +352,9 @@ body main .container-newseason .video {
           padding: 0.3rem;
           text-decoration: none;
           font-family: "IM Fell DW Pica", serif;
-          font-size: 1rem;
           color: #514747; }
       body header .nav-color {
-        background: linear-gradient(90deg, #fbd17e 0%, #f7f778 100%);
+        background: linear-gradient(90deg, #fbd17e 0%, #ffe3c2 100%);
         padding: 0.1rem;
         z-index: 10;
         position: sticky;
@@ -310,11 +377,14 @@ body main .container-newseason .video {
         margin: 1rem;
         padding: 0.5rem;
         text-align: center; }
+        body header .logo .wolf img {
+          width: 13rem;
+          height: 11rem; }
         body header .logo h1 {
-          font-size: 3.4rem;
+          font-size: 3rem;
           font-family: "IM Fell DW Pica", serif; }
         body header .logo p {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
           font-family: "IM Fell DW Pica", serif;
           font-weight: lighter;
           font-style: italic; } }
@@ -331,24 +401,34 @@ body main .container-newseason .video {
     body main .sample {
       margin: 0;
       width: 97%; }
-    body main .container-newseason .New-season {
-      display: flex;
-      flex-direction: row;
-      width: 97%;
-      height: 80%;
-      margin: 1rem 0.5rem 0.5rem 0.5rem; }
-      body main .container-newseason .New-season .img {
-        width: 200px;
-        height: 200px; }
-        body main .container-newseason .New-season .img img {
-          width: 200px;
-          height: 200px; }
-      body main .container-newseason .New-season .info {
-        font-size: 0.9rem;
-        margin: 0.5rem; }
-        body main .container-newseason .New-season .info h2 {
-          font-family: "IM Fell DW Pica", serif;
-          font-size: 1.2rem; }
+    body main .container-newseason {
+      width: 100%;
+      height: 100%; }
+      body main .container-newseason .New-season {
+        display: flex;
+        flex-direction: row;
+        width: 96%;
+        height: 100%;
+        margin: 1rem 0.5rem 0.5rem 0.5rem; }
+        body main .container-newseason .New-season .img {
+          width: 100%;
+          height: 100%; }
+          body main .container-newseason .New-season .img img {
+            width: 100%;
+            height: 100%; }
+        body main .container-newseason .New-season .info {
+          margin: 1rem;
+          font-size: 0.9rem;
+          margin: 0.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          body main .container-newseason .New-season .info h2 {
+            font-family: "IM Fell DW Pica", serif;
+            font-size: 1.4rem; }
+          body main .container-newseason .New-season .info p {
+            font-size: 1rem; }
     body main .container-product {
       display: flex;
       flex-direction: row;
@@ -363,11 +443,11 @@ body main .container-newseason .video {
           font-size: 0.9rem;
           margin: 0.5rem; }
     body main .carrousel-container .carrousel h3 {
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin: 1rem; }
     body main .carrousel-container .carrousel .product-carrousel {
-      background: linear-gradient(90deg, #fbd17e 0%, #f7f778 100%);
-      width: 40%;
+      background: linear-gradient(90deg, #fbd17e 0%, #ffe3c2 100%);
+      width: 21%;
       background-size: cover;
       margin: 1rem; }
       body main .carrousel-container .carrousel .product-carrousel div img {
@@ -381,7 +461,7 @@ body main .container-newseason .video {
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0.2rem 0.2rem 0.2rem #b51212;
+      box-shadow: 0.2rem 0.2rem 0.2rem black;
       width: 10rem;
       height: 2rem;
       margin: 0.5rem;
@@ -392,59 +472,118 @@ body main .container-newseason .video {
 
 @media screen and (max-width: 992px) {
   body .footer-container {
-    background-color: #fbd07c;
-    padding: 0.9rem;
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly; }
-    body .footer-container .footer {
-      padding: 0.5rem;
-      margin: 0.5rem; }
-      body .footer-container .footer h4 {
-        font-size: 1.2rem;
-        font-family: "IM Fell DW Pica", serif;
-        padding: 0.5rem; }
-      body .footer-container .footer ul li {
-        font-family: "IM Fell DW Pica", serif;
-        font-weight: lighter;
-        list-style: none;
+    background-color: #fbd17e;
+    padding: 0.9rem; }
+    body .footer-container .container {
+      display: flex;
+      justify-content: center;
+      justify-content: space-evenly; }
+      body .footer-container .container .footer {
+        padding: 0.5rem;
         margin: 0.5rem; }
-    body .footer-container .icono-wp .link .icono {
-      background-color: green;
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      width: 4%;
-      height: 10%;
-      margin: 1.4rem;
-      border-radius: 100px;
-      animation-name: icono;
-      animation-iteration-count: infinite;
-      animation-duration: 1.5s;
-      animation-direction: alternate-reverse; }
+        body .footer-container .container .footer h4 {
+          font-size: 1.1rem;
+          font-family: "IM Fell DW Pica", serif;
+          padding: 0.5rem; }
+        body .footer-container .container .footer ul li {
+          font-family: "IM Fell DW Pica", serif;
+          font-weight: lighter;
+          list-style: none;
+          margin: 0.5rem; }
+          body .footer-container .container .footer ul li .facebook {
+            width: 2rem;
+            height: 2rem;
+            margin: 0.5rem; }
+          body .footer-container .container .footer ul li .instagram {
+            width: 3rem;
+            height: 3rem; }
+      body .footer-container .container .mediosdepago ul li .tarjeta {
+        width: 3rem;
+        height: 2rem;
+        margin: 0.2rem; }
+      body .footer-container .container .contacto ul li .direccion {
+        text-decoration: none;
+        font-size: 1rem; }
+      body .footer-container .container .contacto ul li .email {
+        font-size: 1rem; }
+      body .footer-container .container .contacto ul li .telefono {
+        text-decoration: none;
+        font-size: 1rem; }
+      body .footer-container .container .icono-wp .link .icono {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 5%;
+        height: 7%;
+        margin: 1.4rem;
+        border-radius: 100px;
+        animation-name: icono;
+        animation-iteration-count: infinite;
+        animation-duration: 1.5s;
+        animation-direction: alternate-reverse; }
   @keyframes icono {
     to {
       transform: scale(1); }
     from {
-      transform: scale(1.1); } } }
+      transform: scale(1.1); } }
+    body .footer-container div {
+      margin: 0.5rem 1rem 0.5rem 0.5rem;
+      font-size: 0.9rem; } }
 
 @media screen and (max-width: 992px) {
-  body main main .container-newseason .information h2 {
-    font-size: 5rem; }
-  body main main .container-newseason .information p {
-    font-size: 1.2rem; }
-  body main main .container-newseason .contact fieldset legend h3 {
-    font-size: 5rem; }
-  body main main .container-newseason .contact fieldset legend .input {
+  body main .carrousel-container .information {
+    margin: 0.5rem;
+    padding: 1rem 1rem 0px 1rem; }
+    body main .carrousel-container .information h2 {
+      font-size: 1.4rem;
+      font-family: "IM Fell DW Pica", serif; }
+    body main .carrousel-container .information p {
+      font-size: 1rem;
+      padding: 0.8rem;
+      font-family: "IM Fell DW Pica", serif;
+      font-weight: lighter; }
+  body main .carrousel-container .video {
+    margin: 0.5rem;
+    padding: 1.5rem; } }
+
+@media screen and (max-width: 992px) {
+  body main .carrousel-container .carrousel h2 {
+    font-size: 1.4rem; }
+  body main .carrousel-container .carrousel h3 {
+    font-size: 1.3rem; }
+  body main .carrousel-container .carrousel .products-button .product-carrousel {
+    width: 30%; }
+    body main .carrousel-container .carrousel .products-button .product-carrousel div p {
+      font-size: 1rem; } }
+
+@media screen and (max-width: 990px) {
+  body main .carrousel-container .information h2 {
+    font-size: 1.4rem; }
+  body main .carrousel-container .information p {
+    font-size: 1rem; }
+  body main .carrousel-container .information .list {
+    font-size: 1rem; } }
+
+@media screen and (max-width: 992px) {
+  body main .carrousel-container .information h2 {
+    font-size: 1.4rem; }
+  body main .carrousel-container .information p {
+    font-size: 1rem; }
+  body main .carrousel-container .contact fieldset legend h3 {
+    font-size: 1.3rem; }
+  body main .carrousel-container .contact fieldset legend .input {
     padding: 0.5rem;
-    font-size: 2rem; }
-    body main main .container-newseason .contact fieldset legend .input input {
-      font-size: 2rem; } }
+    font-size: 1rem; }
+    body main .carrousel-container .contact fieldset legend .input input {
+      font-size: 1rem; } }
 
 @media screen and (max-width: 420px) {
   body header .log-in {
-    background-color: #f1be59;
+    background-color: #f1bf5b;
     font-size: 0.5rem; }
+    body header .log-in img {
+      width: 1.6rem;
+      height: 1.6rem; }
     body header .log-in a {
       padding: 0.4rem;
       font-size: 0.7rem; }
@@ -460,11 +599,11 @@ body main .container-newseason .video {
     text-align: center; }
     body header .logo .wolf img {
       width: 8rem;
-      height: 8rem; }
+      height: 6.7rem; }
     body header .logo h1 {
       font-size: 2rem; }
     body header .logo p {
-      font-size: 1.2rem; } }
+      font-size: 1rem; } }
 
 @media screen and (max-width: 420px) {
   body main {
@@ -478,42 +617,50 @@ body main .container-newseason .video {
     body main .sample {
       margin: 0;
       width: 97%; }
-    body main .container-newseason .New-season {
-      display: flex;
-      flex-direction: row;
-      width: 97%;
-      height: 80%;
-      margin: 1rem 0.5rem 0.5rem 0.5rem; }
-      body main .container-newseason .New-season .img {
-        width: 200px;
-        height: 200px; }
-        body main .container-newseason .New-season .img img {
-          width: 200px;
-          height: 200px; }
-      body main .container-newseason .New-season .info {
-        font-size: 0.9rem;
-        margin: 0.5rem; }
-        body main .container-newseason .New-season .info h2 {
-          font-family: "IM Fell DW Pica", serif;
-          font-size: 1.2rem; }
+    body main .container-newseason {
+      width: 70%;
+      height: 60%;
+      margin: 0; }
+      body main .container-newseason .New-season {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0.5rem 0.5rem 0.5rem; }
+        body main .container-newseason .New-season .img {
+          width: 100%;
+          height: 100%; }
+          body main .container-newseason .New-season .img img {
+            width: 100%;
+            height: 100%; }
+        body main .container-newseason .New-season .info {
+          font-size: 0.9rem;
+          margin: 0.5rem; }
+          body main .container-newseason .New-season .info h2 {
+            font-family: "IM Fell DW Pica", serif;
+            font-size: 1rem; }
+          body main .container-newseason .New-season .info p {
+            font-family: "IM Fell DW Pica", serif;
+            font-size: 0.8rem; }
     body main .container-product {
       display: flex;
       flex-direction: row;
-      justify-content: space-around; }
+      justify-content: space-around;
+      display: flex; }
       body main .container-product .product {
-        width: 50%;
-        margin: 1rem; }
+        flex-direction: column;
+        align-items: center; }
         body main .container-product .product div img {
-          width: 100%;
-          background-size: auto; }
+          width: 100%; }
         body main .container-product .product p {
-          font-size: 0.9rem;
-          margin: 0.5rem; }
+          font-family: "IM Fell DW Pica", serif;
+          font-size: 0.8rem;
+          width: 100%;
+          margin: 0.5rem;
+          padding: 0.5rem; }
     body main .carrousel-container .carrousel h3 {
       font-size: 1rem;
       margin: 1rem; }
     body main .carrousel-container .carrousel .product-carrousel {
-      background: linear-gradient(90deg, #fbd17e 0%, #f7f778 100%);
+      background: linear-gradient(90deg, #fbd17e 0%, #ffe3c2 100%);
       width: 40%;
       background-size: cover;
       margin: 1rem; }
@@ -523,7 +670,7 @@ body main .container-newseason .video {
         padding: 0rem;
         background-size: cover; }
       body main .carrousel-container .carrousel .product-carrousel p {
-        font-size: 1rem; }
+        font-size: 0.8rem; }
     body main .carrousel-container .more-products {
       display: flex;
       justify-content: center;
@@ -531,65 +678,94 @@ body main .container-newseason .video {
       box-shadow: 0.2rem 0.2rem 0.2rem #b51212;
       margin: 0.5rem;
       padding: 0rem;
-      width: 10rem;
-      height: 2rem; }
+      width: 9rem;
+      height: 1.5rem; }
       body main .carrousel-container .more-products .button {
         margin: 0;
-        font-size: 1rem; } }
+        font-size: 0.8rem; } }
 
 @media screen and (max-width: 420px) {
-  body .footer-container {
+  body .footer-container .container {
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem; }
-    body .footer-container .footer {
+    body .footer-container .container .footer {
       display: flex;
       flex-direction: column;
       margin-top: 0.5rem;
       margin: 0;
       padding: 0; }
-    body .footer-container .icono-wp .link .icono {
-      width: 13%;
-      height: 13%;
-      margin: 1.4rem; } }
+      body .footer-container .container .footer h4 {
+        font-size: 0.9rem; }
+      body .footer-container .container .footer ul li .facebook {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0.4rem; }
+      body .footer-container .container .footer ul li .instagram {
+        width: 2rem;
+        height: 2rem; }
+    body .footer-container .container .mediosdepago ul li .tarjeta {
+      width: 2.6rem;
+      height: 1.5rem;
+      margin: 0; }
+    body .footer-container .container .contacto ul li .direccion {
+      text-decoration: none;
+      font-size: 0.8rem; }
+    body .footer-container .container .contacto ul li .email {
+      font-size: 0.8rem; }
+    body .footer-container .container .contacto ul li .telefono {
+      text-decoration: none;
+      font-size: 0.8rem; }
+    body .footer-container .container .icono-wp .link .icono {
+      width: 7%;
+      height: 8%;
+      margin: 1.4rem; }
+  body .footer-container div {
+    margin: 0;
+    font-family: "IM Fell DW Pica", serif;
+    font-size: 0.8rem; } }
 
 @media screen and (max-width: 420px) {
-  body main .container-newseason .information h2 {
-    font-size: 2rem; }
-  body main .container-newseason .information p {
-    font-size: 0.7rem; }
-  body main .container-newseason .video {
-    width: 95%; }
-    body main .container-newseason .video .info-video {
-      width: 95%; } }
+  body main .carrousel-container .information h2 {
+    font-size: 1.2rem; }
+  body main .carrousel-container .information p {
+    font-size: 0.8rem;
+    margin: 0; }
+  body main .carrousel-container .video {
+    margin: 0rem;
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    width: 100px; } }
 
 @media screen and (max-width: 420px) {
   body main .carrousel-container .carrousel h2 {
     font-size: 1.2rem; }
   body main .carrousel-container .carrousel h3 {
-    font-size: 1.1rem; }
-  body main .carrousel-container .carrousel .product-carrousel div p {
-    font-size: 0.7rem; } }
-
-body main .information h2 {
-  font-size: 1.4rem; }
-
-body main .information p {
-  font-size: 0.8rem; }
-
-body main .information .list {
-  font-size: 0.8rem; }
-
-body main .container-newseason .information h2 {
-  font-size: 1.4rem; }
-
-body main .container-newseason .information p {
-  font-size: 0.9rem; }
-
-body main .container-newseason .contact fieldset legend h3 {
-  font-size: 0.9rem; }
-
-body main .container-newseason .contact fieldset legend .input {
-  font-size: 0.9rem; }
-  body main .container-newseason .contact fieldset legend .input input {
     font-size: 1rem; }
+  body main .carrousel-container .carrousel .products-button .only-products .product-carrousel {
+    width: 40%; }
+    body main .carrousel-container .carrousel .products-button .only-products .product-carrousel div p {
+      font-size: 0.8rem; } }
+
+@media screen and (max-width: 420px) {
+  body main .carrousel-container .information h2 {
+    font-size: 1.2rem; }
+  body main .carrousel-container .information p {
+    font-size: 0.8rem; }
+  body main .carrousel-container .information .list {
+    font-size: 0.8rem; }
+    body main .carrousel-container .information .list ol li {
+      font-size: 0.8rem; } }
+
+@media screen and (max-width: 420px) {
+  body main .carrousel-container .information h2 {
+    font-size: 1.2rem; }
+  body main .carrousel-container .information p {
+    font-size: 0.8rem; }
+  body main .carrousel-container .contact fieldset legend h3 {
+    font-size: 1rem; }
+  body main .carrousel-container .contact fieldset legend .input {
+    font-size: 0.8rem; }
+    body main .carrousel-container .contact fieldset legend .input input {
+      font-size: 0.8rem; } }

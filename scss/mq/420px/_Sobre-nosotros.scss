@@ -1,22 +1,26 @@
 @media screen and (max-width:420px){
     body{
         main{
-            .container-newseason{
+            .carrousel-container{
                 .information{
                     h2{
-                        font-size: 2rem;
+                        font-size: 1.2rem;
 
                     }
                     p{
-                        font-size: 0.7rem;
+                        font-size: 0.8rem;
+                        margin: 0;
 
                     }
                 }
-                .video{
+                .video{                    
+                    @include margin-padding (0rem, 0rem);
+                    display: flex;
+                    justify-content: center;
 
-                    width: 95%;
+                    width:100px;
                     .info-video{
-                        width: 95%;
+
 
                     }
                 }

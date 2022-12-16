@@ -8,6 +8,7 @@
                 background-color:$color-background-uno;
                 font-size: 0.5rem; 
                 img{
+                    @include medidas (1.6rem, 1.6rem);
         
                 }
                 a{
@@ -20,27 +21,17 @@
                 padding: 0.4rem; 
                 font-size: 0.9rem; 
     
-                div{
-                    .navbar-toggler{}
+                div{                    
                     div{
-                        ul{
-     
-                            li{
-    
+                        ul{     
+                            li{    
                                 a{
                                     margin-top: 0.6 0 0 0;
-                                    padding: 0;
-    
+                                    padding: 0;    
                                 }
                             }
                         }
-                        div{
-                            .cart{
-                                a{
-    
-                                }
-                            }
-                        }
+
                     }
         
                 } 
@@ -52,9 +43,7 @@
     
                 .wolf{
                     img{
-
-                        @include medidas (8rem, 8rem);
-   
+                        @include medidas (8rem, 6.7rem);  
 
                     }
         
@@ -64,14 +53,10 @@
     
                 }
                 p{
-                    font-size: 1.2rem;    
+                    font-size: 1rem;    
                 }
             }
-        }
+        }  
     
-        
-        
-    
-        
     }
 }

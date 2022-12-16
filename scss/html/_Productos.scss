@@ -1,25 +1,33 @@
 body{
     main{
         .carrousel-container{
-            .carrousel{
-                h2{
-                    font-size: 2rem;
-                }
-                h3{
-                    font-size: 1.8rem;
-                }
-                .product-carrousel{
-                    div{
-                        img{
+                .carrousel{      
 
-                        }
-                        p{
-                            font-size: 0.7rem;
-                        }
+                    h2{
+                        font-size: 1.6rem;
                     }
-                }
-            }
+                    h3{
+                        font-size: 1.5rem;
+                    }
 
+                    .products-button{                         
+                        @extend %estilosFlexDos;              
+ 
+                        .only-products{                     
+                            .product-carrousel{      
+                                div{
+                                    p{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+
+                        }
+
+                    }
+
+
+                }
         }
     }
 }

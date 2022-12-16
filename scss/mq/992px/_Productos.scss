@@ -1,4 +1,34 @@
 @media screen and (max-width:992px){
+    body{
+        main{
+            .carrousel-container{
+                .carrousel{
+                    h2{
+                        font-size: 1.4rem;
+                    }
+                    h3{
+                        font-size: 1.3rem;
+                    }
+                    .products-button{
+                        .product-carrousel{  
+                            width: 30%;                          
+                            div{
+                                img{
+        
+                                }
+                                p{
+                                    font-size: 1rem;
+                                }
+                            }                           
+
+                        }
+                    }
+                }
+
+    
+            }
+        }
+    }
     
 
 }

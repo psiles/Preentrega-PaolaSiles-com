@@ -2,26 +2,37 @@
 @media screen and (max-width:420px){
     body{
         main{
-            .carrousel-container{
+            .carrousel-container{                
                 .carrousel{
                     h2{
                         font-size: 1.2rem;
                     }
                     h3{
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                     }
-                    .product-carrousel{
-                        div{
-                            img{
-    
+                    .products-button{
+                        .only-products{
+                            .product-carrousel{
+                                width: 40%;
+                                div{
+                                    
+                                    img{
+            
+                                    }
+                                    p{
+                                        font-size: 0.8rem;
+                                    }
+                                }
+
                             }
-                            p{
-                                font-size: 0.7rem;
-                            }
+
                         }
+
+
                     }
+                        
                 }
-    
+
             }
         }
     }
